@@ -62,8 +62,8 @@ function Menu(){
                         <Nav.Link key={i} className='nav-btn' href={locale!==null?(`?locale=${locale}`+item.href):item.href}>{locale?(item.english_name):item.chinese_name}</Nav.Link>
                     ))}
                     <NavDropdown title={locale!==null?("Other"):"相關連結"} id="nav-dropdown">
-                        <NavDropdown.Item href='https://annual-event.hub-fintech-ncku.tw'>{locale!==null?('2024 Annual Event'):'2024 國際年會'}</NavDropdown.Item>
-                        <NavDropdown.Item href='https://conference.2024.hub-fintech-ncku.tw'>{locale!==null?('2024 ESGFT Conference'):'2024 學術研討會'}</NavDropdown.Item>
+                        <NavDropdown.Item href='https://annual-event.hub-fintech-ncku.tw'>{locale!==null?('2025 Annual Event'):'2025 國際年會'}</NavDropdown.Item>
+                        <NavDropdown.Item href='https://conference.hub-fintech-ncku.tw'>{locale!==null?('2025 ESGFT Conference'):'2025 學術研討會'}</NavDropdown.Item>
                     </NavDropdown>
                     <Nav.Link href={`/register${locale?(`?locale=${locale}`):''}`} id='registry'>
                         <Button className='nav-btn border-0' style={{backgroundColor:'#2F58CD'}}>{locale!=null?('Register Now'):'按此報名'}</Button>
