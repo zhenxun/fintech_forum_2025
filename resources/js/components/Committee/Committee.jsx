@@ -7,7 +7,7 @@ import Menu from './Menu';
 function Committee({locale}) {
     const [member,setMember]=useState(null)
     function getData(){
-        fetch(`http://localhost:8001/api/data?locale=${locale}&year=2025`,{
+        fetch(`https://admin.forum.hub-fintech-ncku.tw/api/data?locale=${locale}&year=2025`,{
             method:'GET',
         }).then(response=>{
             return response.json()

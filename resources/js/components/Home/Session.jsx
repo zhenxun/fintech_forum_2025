@@ -6,8 +6,8 @@ function Session({agenda,locale}){
     return(<div id='session' className=' bg-dark' style={{padding: '6rem 0'}}>
         <Container className='text-dark py-3'>
             <div className='d-flex justify-content-center'>
-                <div className='rounded' style={{width:'820px',height:'400px',backgroundColor:'gold',zIndex:0}} >
-                    <h1 className='py-5 text-center'>{locale?('Session Summary'):'議程摘要'}</h1>
+                <div className='rounded' style={{width:'820px',height:'400px',background:'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',zIndex:0}} >
+                    <h1 className='py-5 text-center text-light'>{locale?('Session Summary'):'議程摘要'}</h1>
                 </div>
             </div>
             <Container className="rounded bg-light text-dark p-3" style={{maxWidth:'700px',marginTop:'-270px',position:'relative'}}>
@@ -27,7 +27,7 @@ function Session({agenda,locale}){
                                     right: '-20px'
                                 }}
                             >
-                                <div className="px-3 py-2 text-dark" style={{ backgroundColor: 'gold' }}>
+                                <div className="px-3 py-2 text-light" style={{ background: 'linear-gradient(135deg, #43cea2 0%, #185a9d 100%)' }}>
                                     {item.time}
                                 </div>
                             </div>
@@ -64,7 +64,7 @@ function TimeLine({timeline,date,time,id,locale}){
             ))}
             </Timeline> */}
             <div className="text-end my-3" id='application'>
-                <Button className='nav-btn shadow border-0 px-3' size={'md'} style={{backgroundColor:'gold'}} onClick={()=>window.location.href=`/agenda${locale?(`?locale=${locale}`):''}`}>{locale?(`More`):'查看更多'}</Button>
+                <Button className='nav-btn shadow border-0 px-3 text-light' size={'md'} style={{background:'linear-gradient(135deg, #43cea2 0%, #185a9d 100%)'}} onClick={()=>window.location.href=`/agenda${locale?(`?locale=${locale}`):''}`}>{locale?(`More`):'查看更多'}</Button>
             </div>
         </Container>
     )

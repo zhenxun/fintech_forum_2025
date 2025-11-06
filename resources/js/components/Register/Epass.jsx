@@ -18,24 +18,27 @@ function Epass() {
     const [form] = Form.useForm();
     const onFinish = (values) => {
         let data=new FormData();
-        data.append('register_code','REG'+values.code)
+        data.append('register_code',values.code!==undefined?'REG'+values.code:undefined)
         data.append('name',values.name)
         data.append('email',values.email)
         getJoin(data)
     };
 
     function getJoin(file){
-        fetch('http://localhost:8001/api/check.code',{
+        fetch('https://admin.forum.hub-fintech-ncku.tw/api/check.code',{
             method:'POST',
             body:file,
         }).then(response=>{
             return response.json()
         }).then(res=>{
-            messageApi.success(res.message);
             if(res.result){
                 setJoin(res.join)
-                cookie.set('code',res.join.register_code)
+                messageApi.success(res.message);
+                // setResult('有報名成功')
+            }else{
+                messageApi.error(res.message);
             }
+            form.resetFields(['name','email']);
         })
     }
 
@@ -66,15 +69,15 @@ function Epass() {
                 <Form.Item name="name" className='mt-2' label="姓名/Name">
                     <Input id='name' />
                 </Form.Item>
-                <Divider className='mt-3'>或是</Divider>
-                <Form.Item label="請輸入入場序號(英文字母後7碼)">
+                {/* <Divider className='mt-3'>或是</Divider>
+                <Form.Item label="請輸入入場序號(英文字母後3碼)">
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                        {/* <div style={{ fontWeight: 'bold', fontSize: 16 }}>SFTACK </div> */}
+                        <div style={{ fontWeight: 'bold', fontSize: 16 }}>SFTACK </div>
                         <Form.Item name="code" >
-                            <Input.OTP inputMode={'numeric'} length={7} />
+                            <Input.OTP inputMode={'numeric'} length={3} />
                         </Form.Item>
                     </div>
-                </Form.Item>
+                </Form.Item> */}
                 <Button className='my-3' size={'large'} type="primary" block htmlType={'submit'}>查詢</Button>
             </Form>
         </div>
@@ -83,7 +86,7 @@ function Epass() {
     return (
         <div style={{height:windowHeight*0.8}} className="d-flex justify-content-center align-items-center m-2">
             <div className="card-container">
-                <div className={`card ${side ? 'flipped' : ''}`} onClick={handleFlip}>
+                <div className={`card flipped`}>
                     <div className="card-front">
                         <FrontCard item={join} onRemove={onRemove} />
                     </div>
@@ -91,6 +94,14 @@ function Epass() {
                         <BackCard item={join} onRemove={onRemove} logo={'https://sfta.ncku.org.tw/assets/logo/alliancelogo.webp'} />
                     </div>
                 </div>
+                {/* <div className={`card ${side ? 'flipped' : ''}`} onClick={handleFlip}>
+                    <div className="card-front">
+                        <FrontCard item={join} onRemove={onRemove} />
+                    </div>
+                    <div className="card-back">
+                        <BackCard item={join} onRemove={onRemove} logo={'https://sfta.ncku.org.tw/assets/logo/alliancelogo.webp'} />
+                    </div>
+                </div> */}
                 <div className='mt-3 text-end'>
                 </div>
             </div>
@@ -159,8 +170,8 @@ function BackCard({item,logo,onRemove}){
                     <QRCode size={300} value={JSON.stringify(item.register_code)} />
                 </div>
                 <div className='position-absolute bottom-0 start-0 m-3 text-muted'>
-                    <div>姓名:{item.name}</div>
-                    <div>序號:{item.register_code}</div>
+                    <div>姓名：{item.name}</div>
+                    <div>序號：{item.register_code}</div>
                     <div>地點：光復校區 管理學院地下1樓 62X05</div>
                     <div>參與方法：{item.place}</div>
                     <div>餐盒類型：{item.food}</div>

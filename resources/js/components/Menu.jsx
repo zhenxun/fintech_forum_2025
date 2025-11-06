@@ -71,7 +71,9 @@ function Menu(){
                     <Nav.Link href={`/check${locale?(`?locale=${locale}`):''}`} id='registry'>
                         <Button className='nav-btn border-0' style={{backgroundColor:'#3ccd2fff'}}>{locale!=null?('Check Result'):'報名結果查詢'}</Button>
                     </Nav.Link>
+                    <div className='d-flex flex-row align-items-center'>
                     <Nav.Link onClick={()=>toggle(false)}>中</Nav.Link><span className='text-light'>｜</span><Nav.Link onClick={()=>toggle(true)}>En</Nav.Link>
+                    </div>
                 </Nav>):null}
             </Navbar.Collapse>
         </Navbar>

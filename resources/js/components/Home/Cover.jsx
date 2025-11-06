@@ -12,8 +12,8 @@ function Cover({locale}) {
             <div style={{backgroundColor: "rgba(0,0,0,0.5)",height: "100%"}} className="d-flex align-items-center text-light ps-3">
                 <div className='px-3' style={{maxWidth:'100%'}}>
                     <div className="title-xlarge">2025</div>
-                    <div className="title-xlarge">XXXXX</div>
-                    <i style={{fontSize:'2cqw'}}>XXXXX</i>
+                    <div className="title-xlarge">國立成功大學FinTech商創研究中心</div>
+                    <i style={{fontSize:'2cqw'}}>第六屆負責任金融暨可信任AI之國際趨勢與展望實務論壇</i>
                     <CountdownTimer locale={locale} targetDate={targetDate} />
                 </div>
             </div>
@@ -22,15 +22,15 @@ function Cover({locale}) {
         <Row className='text-center p-3'>
             <Col md={4}>
                 <h4>{locale?'Registration period':'報名期間'}</h4>
-                <h2 style={{color:'#ffec00'}}>2025/10/16 ~ 2025/10/31</h2>
+                <h2 style={{color:'#ffec00'}}>2025/11/04 ~ 2025/11/12</h2>
             </Col>
             <Col md={4}>
                 <h4>{locale?'Forum Date':'論壇日期'}</h4>
-                <h2 style={{color:'#ffec00'}}>2025/11/12</h2>
+                <h2 style={{color:'#ffec00'}}>2025/11/18</h2>
             </Col>
             <Col md={4}>
                 <h4>{locale?'Forum Time':'活動時間'}</h4>
-                <h2 style={{color:'#ffec00'}}>09:00 ~ 18:10</h2>
+                <h2 style={{color:'#ffec00'}}>09:00 ~ 18:00</h2>
             </Col>
         </Row>
         </div>

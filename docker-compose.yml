@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+    website:
+        image: docker.io/library/fintech_conference_2023-website:latest
+        container_name: fintech_forum_2025_website
+        restart: unless-stopped
+        tty: true
+        environment:
+            SERVICE_NAME: fintech_forum_2025_website
+        working_dir: /var/www
+        ports:
+            - "10025:9000"
+        volumes:
+            - ./:/var/www
+            - ./php/php.ini:/usr/local/etc/php/php.ini
+        networks:
+            - fintech_highlight_app-network
+
+    # fintech_forum_2024_webserver:
+    #     image: nginx:alpine
+    #     container_name: fintech_forum_2024_webserver
+    #     restart: unless-stopped
+    #     tty: true
+    #     ports:
+    #         - "10027:80"
+    #     volumes:
+    #         - ./:/var/www
+    #         - ./nginx/conf.d/:/etc/nginx/conf.d/
+    #     networks:
+    #         - fintech_highlight_app-network
+
+networks:
+  fintech_highlight_app-network:
+    driver: bridge
+    external: true

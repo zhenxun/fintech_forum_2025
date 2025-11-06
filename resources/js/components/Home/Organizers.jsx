@@ -27,15 +27,17 @@ function Organizers({locale}) {
                 </Col>
                 <Col className="p-2" xs={12} xl={3}>
                     <div className='d-flex align-items-center justify-content-center' style={{height:'200px'}}>
-                        <Image alt="永續金融科技產學小聯盟" src='/assets/logo/sfta.png' fluid/>
+                        <Image alt="永續金融科技產學小聯盟" src='/assets/logo/sfta-n.png' fluid/>
                     </div>
                 </Col>
             </Row>
             <h2 className="text-center pt-5 pb-3" style={{fontWeight:'bold'}}>{locale?'Co-Organizer':'合辦單位(依筆畫順序列之)'}</h2>
-            <Row className="d-flex justify-content-start align-items-center">
+            <Row className="d-flex justify-content-start align-items-start">
+                {/* 要求順序：王道銀行、中租控股公司、玉山銀行、南山人壽保險股份有限公司、康和證券集團、資誠智能風險管理諮詢公司、成功大學管理學院 */}
                 <Col className="p-2" xs={12} xl={3}>
                     <div className='d-flex align-items-center justify-content-center' style={{height:'200px'}}>
-                        <Image style={{maxWidth:'320px'}} alt="上海商業儲蓄銀行" src='/assets/partner/上海銀行.png' fluid/>
+                        {/* 請注意：下列檔案需放到 public/assets/partner/ 若尚未上傳，圖片將無法顯示 */}
+                        <Image style={{maxWidth:'320px'}} alt="王道銀行" src='/assets/partner/王道銀行.png' fluid/>
                     </div>
                 </Col>
                 <Col className="p-2" xs={12} xl={3}>
@@ -45,12 +47,7 @@ function Organizers({locale}) {
                 </Col>
                 <Col className="p-2" xs={12} xl={3}>
                     <div className='d-flex align-items-center justify-content-center' style={{height:'200px'}}>
-                        <Image style={{maxHeight:'60px'}} alt="兆豐金融控股公司" src='/assets/partner/兆豐金融控股.svg' fluid/>
-                    </div>
-                </Col>
-                <Col className="p-2" xs={12} xl={3}>
-                    <div className='d-flex align-items-center justify-content-center' style={{height:'200px'}}>
-                        <Image style={{maxWidth:'320px'}} alt="京城商業銀行" src='/assets/partner/京城銀行.png' fluid/>
+                        <Image style={{maxWidth:'320px'}} alt="玉山銀行" src='/assets/partner/玉山銀行.jpg' fluid/>
                     </div>
                 </Col>
                 <Col className="p-2" xs={12} xl={3}>
@@ -61,6 +58,11 @@ function Organizers({locale}) {
                 <Col className="p-2" xs={12} xl={3}>
                     <div className='d-flex align-items-center justify-content-center' style={{height:'200px'}}>
                         <Image style={{maxWidth:'320px'}} alt="康和證券集團" src='/assets/partner/康和證券.png' fluid/>
+                    </div>
+                </Col>
+                <Col className="p-2" xs={12} xl={3}>
+                    <div className='d-flex align-items-center justify-content-center' style={{height:'200px'}}>
+                        <Image style={{maxWidth:'320px'}} alt="資誠智能風險管理諮詢公司" src='/assets/partner/資誠.png' fluid/>
                     </div>
                 </Col>
                 <Col className="p-2" xs={12} xl={3}>

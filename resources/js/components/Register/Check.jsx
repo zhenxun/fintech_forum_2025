@@ -16,7 +16,7 @@ function Check() {
     };
 
     function getChecked(file){
-        fetch('http://localhost:8001/api/check.code',{
+        fetch('https://admin.forum.hub-fintech-ncku.tw/api/check.code',{
             method:'POST',
             body:file,
             headers: {
@@ -25,10 +25,12 @@ function Check() {
         }).then(response=>{
             return response.json()
         }).then(res=>{
-            messageApi.success(res.message);
             if(res.result){
                 setJoin(res.join)
+                messageApi.success(res.message);
                 // setResult('有報名成功')
+            }else{
+                messageApi.error(res.message);
             }
             form.resetFields(['name','email']);
         })

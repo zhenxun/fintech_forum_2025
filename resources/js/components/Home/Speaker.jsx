@@ -15,7 +15,12 @@ function Speaker({locale,speaker}){
                             <div className='member'>
                                 <LazyLoadImage 
                                     effect="blur" 
-                                    style={{ width: item.width?item.width:'100%', height: item.height?item.height:'100%' }} 
+                                    style={{
+                                        width: item.width ? item.width : '100%',
+                                        height: item.height ? item.height : '100%',
+                                        borderRadius: 10,
+                                        objectFit: 'cover'
+                                    }} 
                                     src={item.src} 
                                     alt={item.name} 
                                 />
