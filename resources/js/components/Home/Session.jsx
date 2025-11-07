@@ -35,7 +35,9 @@ function Session({agenda,locale}){
                     
                 ))}
                 <div className='text-center'>
-                    <Button type='text' size={'large'}>查看更多</Button>
+                    <Button type='text' size={'large'} onClick={() => window.open("/agenda", "_blank")}>
+                        查看更多
+                    </Button>
                 </div>
             </Container>
             {/* <TimeLine 

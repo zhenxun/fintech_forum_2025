@@ -4,6 +4,15 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Menu from './Menu';
 import './agenda.css';
 
+const sponsorLogos = [
+    { alt: '上海商業儲蓄銀行', src: '/assets/partner/上海銀行.png' },
+    { alt: '中租控股股份有限公司', src: '/assets/partner/中租.png' },
+    { alt: '兆豐金融控股公司', src: '/assets/partner/兆豐金融控股.svg' },
+    { alt: '京城商業銀行', src: '/assets/partner/京城銀行.png' },
+    { alt: '南山人壽保險股份有限公司', src: '/assets/partner/南山.png' },
+    { alt: '康和證券集團', src: '/assets/partner/康和證券.png' },
+];
+
 
 function Agenda({locale}) {
 
@@ -74,25 +83,12 @@ function Time({timeline}){
                                                         <div className='ps-3' style={{fontSize:'20pt'}}>{item.name}</div>
                                                         <div className='ps-3' style={{fontSize:'18pt'}}>{item.title}</div>
                                                         {element.sponsors ? (
-                                                            <div className='d-flex flex-wrap align-items-center px-3 pt-2 sponsor-list'>
-                                                                <div className='px-3 rounded d-flex align-items-center' style={{height:'50px',backgroundColor:'rgba(255,255,255)'}}>
-                                                                    <LazyLoadImage style={{maxWidth:'110px'}} alt="上海商業儲蓄銀行" src='/assets/partner/上海銀行.png' />
-                                                                </div>
-                                                                <div className='px-3 rounded d-flex align-items-center' style={{height:'50px',backgroundColor:'rgba(255,255,255)'}}>
-                                                                    <LazyLoadImage style={{maxWidth:'90px'}} alt="中租控股股份有限公司" src='/assets/partner/中租.png' />
-                                                                </div>
-                                                                <div className='px-3 rounded d-flex align-items-center' style={{height:'50px',backgroundColor:'rgba(255,255,255)'}}>
-                                                                    <LazyLoadImage style={{maxWidth:'70px'}} alt="兆豐金融控股公司" src='/assets/partner/兆豐金融控股.svg' />
-                                                                </div>
-                                                                <div className='px-3 rounded d-flex align-items-center' style={{height:'50px',backgroundColor:'rgba(255,255,255)'}}>
-                                                                    <LazyLoadImage style={{maxWidth:'90px'}} alt="京城商業銀行" src='/assets/partner/京城銀行.png' />
-                                                                </div>
-                                                                <div className='px-3 rounded d-flex align-items-center' style={{height:'50px',backgroundColor:'rgba(255,255,255)'}}>
-                                                                    <LazyLoadImage style={{maxWidth:'90px'}} alt="南山人壽保險股份有限公司" src='/assets/partner/南山.png' />
-                                                                </div>
-                                                                <div className='px-3 rounded d-flex align-items-center' style={{height:'50px',backgroundColor:'rgba(255,255,255)'}}>
-                                                                    <LazyLoadImage style={{maxWidth:'90px'}} alt="康和證券集團" src='/assets/partner/康和證券.png' />
-                                                                </div>
+                                                            <div className='d-flex flex-wrap align-items-start justify-content-start px-3 pt-2 sponsor-list'>
+                                                                {sponsorLogos.map((logo) => (
+                                                                    <div key={logo.src} className='sponsor-card'>
+                                                                        <LazyLoadImage alt={logo.alt} src={logo.src} />
+                                                                    </div>
+                                                                ))}
                                                             </div>
                                                         ) : null}
                                                     </div>
