@@ -6,11 +6,12 @@ import Home from './Home/Home';
 import Agenda from './Agenda/Agenda';
 import Epass from './Register/Epass';
 import Register from './Register/Register';
+import { useEffect } from 'react';
 
 function Index() {
     const searchParams = new URLSearchParams(document.location.search);
     const locale=searchParams.get("locale")
-    
+
     return (
         <BrowserRouter>
             <Routes>

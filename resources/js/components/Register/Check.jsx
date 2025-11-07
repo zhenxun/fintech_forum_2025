@@ -54,7 +54,7 @@ function Check() {
                 <Form.Item rules={[{required:true,message:'必填'}]} name="name" label="姓名">
                     <Input id='name' />
                 </Form.Item>
-                <Button className='my-3' size={'large'} type="primary" block htmlType={'submit'}>查詢</Button>
+                <Button className='my-3' size={'large'} type="primary" block htmlType={'submit'}>查詢 / Search</Button>
             </Form>
             
             </Typography>
