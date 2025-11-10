@@ -7,7 +7,7 @@ function Cover({locale}) {
         <>
         <div style={{position: "relative",height: "850px",overflow: "hidden"}}>
             <video autoPlay muted loop playsInline  style={{position: "absolute",top: "0",left: "0",width: "100%",height:" 100%",objectFit:'cover',zIndex: "-1"}}>
-                <source src="/assets/video/video1.webm" type="video/mp4" />
+                <source src="/assets/video/video2.webm" type="video/mp4" />
             </video>
             <div style={{backgroundColor: "rgba(0,0,0,0.5)",height: "100%"}} className="d-flex align-items-center text-light ps-3">
                 <div className='px-3' style={{maxWidth:'100%'}}>
