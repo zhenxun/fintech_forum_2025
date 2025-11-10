@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 
 function Cover({locale}) {
-    const targetDate = '2025-11-12T09:00:00';
+    const targetDate = '2025-11-18T08:30:00';
     return(
         <>
         <div style={{position: "relative",height: "850px",overflow: "hidden"}}>
@@ -12,8 +12,8 @@ function Cover({locale}) {
             <div style={{backgroundColor: "rgba(0,0,0,0.5)",height: "100%"}} className="d-flex align-items-center text-light ps-3">
                 <div className='px-3' style={{maxWidth:'100%'}}>
                     <div className="title-xlarge">2025</div>
-                    <div className="title-xlarge">國立成功大學FinTech商創研究中心</div>
-                    <i style={{fontSize:'2cqw'}}>第六屆負責任金融暨可信任AI之國際趨勢與展望實務論壇</i>
+                    <div className="title-xlarge">第六屆負責任金融暨可信任AI之國際趨勢與展望實務論壇</div>
+                    <i style={{fontSize:'2cqw'}}>2025 The 6th International Conference on Responsible Finance and ESG Management</i>
                     <CountdownTimer locale={locale} targetDate={targetDate} />
                 </div>
             </div>
