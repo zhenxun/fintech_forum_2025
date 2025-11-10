@@ -100,7 +100,21 @@ function Committee({locale}) {
             <Menu />
             <div className="page-section py-3" id='content'>
                 <Container style={{padding: '1rem 0'}} id='member'>
-                    <h1 className='text-center pb-3'>{locale?'Committee':'籌備委員會'}</h1>
+                    <h1 className='text-center pb-3'>
+                        {locale ? (
+                            'Committee'
+                        ) : (
+                            <>
+                                籌備委員會委員
+                                <small
+                                    className='text-muted'
+                                    style={{ fontSize: '0.65em', marginLeft: '0.5rem', letterSpacing: '0.05em' }}
+                                >
+                                    （按照筆畫排序）
+                                </small>
+                            </>
+                        )}
+                    </h1>
                     {committeeSections.map((item)=>(
                         <div key={item.id}>
                             <Row className='pt-3'>
