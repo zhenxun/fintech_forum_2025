@@ -12,21 +12,25 @@
 .sponsor-list{
   gap:0.75rem;
   justify-content:flex-start;
-  align-items:flex-start;
+  align-items:center;
+  flex-wrap:wrap;
 }
 .sponsor-card{
   background:#fff;
   border-radius:10px;
   padding:0.35rem 1rem;
-  height:60px;
+  height:70px;
+  width:140px;
   display:flex;
   align-items:center;
   justify-content:center;
   box-shadow:0 6px 16px rgba(0,0,0,0.15);
 }
 .sponsor-card img{
-  max-height:38px;
+  max-height:48px;
+  max-width:120px;
   width:auto;
+  height:auto;
   object-fit:contain;
   filter:grayscale(10%);
 }
@@ -35,6 +39,6 @@
   .time-badge{width:80px}
   .time-badge h5{padding:0.4rem 0}
   .member-info .ps-3{font-size:16pt}
-  .sponsor-card{height:50px;padding:0.25rem 0.75rem}
-  .sponsor-card img{max-height:32px}
+  .sponsor-card{height:60px;width:110px;padding:0.25rem 0.5rem}
+  .sponsor-card img{max-height:38px;max-width:90px}
 }

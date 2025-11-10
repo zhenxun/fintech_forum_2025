@@ -5,12 +5,13 @@ import Menu from './Menu';
 import './agenda.css';
 
 const sponsorLogos = [
-    { alt: '上海商業儲蓄銀行', src: '/assets/partner/上海銀行.png' },
+    { alt: '王道銀行', src: '/assets/partner/王道銀行.png' },
     { alt: '中租控股股份有限公司', src: '/assets/partner/中租.png' },
-    { alt: '兆豐金融控股公司', src: '/assets/partner/兆豐金融控股.svg' },
-    { alt: '京城商業銀行', src: '/assets/partner/京城銀行.png' },
+    { alt: '玉山銀行', src: '/assets/partner/玉山銀行.jpg' },
     { alt: '南山人壽保險股份有限公司', src: '/assets/partner/南山.png' },
     { alt: '康和證券集團', src: '/assets/partner/康和證券.png' },
+    { alt: '資誠智能風險管理諮詢公司', src: '/assets/partner/資誠.png' },
+    { alt: '成功大學管理學院', src: '/assets/partner/成功大學管理學院.png' },
 ];
 
 
