@@ -5,7 +5,10 @@ function Speaker({locale,speaker}){
     
     return(<div id='speaker' className='bg-light' style={{padding: '1rem 0'}}>
         <div className='py-3'>
-            <h1 className='py-5 text-center'>{locale?('Speakers'):'出席嘉賓'}{!locale?(<div style={{fontSize:'20pt'}} className='text-muted mb-3'>依場次先後排序</div>):null}</h1>
+            <div style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
+                <h1 className='py-5 text-center'>{locale?('Speakers'):'出席嘉賓'}</h1>
+                <h6>{!locale?(<div style={{display:"flex", alignItems:"flex-end"}} className='text-muted'>(依場次先後排序)</div>):null}</h6>
+            </div>
             <Container>
             <Row className='team' style={{overflow:'hidden'}}>
             {speaker.length!==0?(speaker.map((item,i) => (

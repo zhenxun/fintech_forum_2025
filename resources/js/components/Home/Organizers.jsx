@@ -31,7 +31,10 @@ function Organizers({locale}) {
                     </div>
                 </Col>
             </Row>
-            <h2 className="text-center pt-5 pb-3" style={{fontWeight:'bold'}}>{locale?'Co-Organizer':'合辦單位(依筆畫順序列之)'}</h2>
+            <div style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
+                <h2 className='py-5 text-center'>{locale?('Co-Organizer'):'合辦單位'}</h2>
+                <h6>{!locale?(<div style={{display:"flex", alignItems:"center"}} className='text-muted'>(依筆畫順序列之)</div>):null}</h6>
+            </div>
             <Row className="d-flex justify-content-start align-items-start">
                 {/* 要求順序：王道銀行、中租控股公司、玉山銀行、南山人壽保險股份有限公司、康和證券集團、資誠智能風險管理諮詢公司、成功大學管理學院 */}
                 <Col className="p-2" xs={12} xl={3}>

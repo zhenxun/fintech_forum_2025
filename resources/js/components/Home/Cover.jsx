@@ -30,7 +30,7 @@ function Cover({locale}) {
             </Col>
             <Col md={4}>
                 <h4>{locale?'Forum Time':'活動時間'}</h4>
-                <h2 style={{color:'#ffec00'}}>09:00 ~ 18:00</h2>
+                <h2 style={{color:'#ffec00'}}>09:00 ~ 18:10</h2>
             </Col>
         </Row>
         </div>
