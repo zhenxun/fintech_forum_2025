@@ -133,9 +133,9 @@ function FrontCard({item,onRemove}){
                     width: "100%",
                     paddingInline: "16px"
                 }}>
-                    <div style={{ height: "320px"}} className='rounded-top d-flex justify-content-center align-items-center'>
+                    {/* <div style={{ height: "320px"}} className='rounded-top d-flex justify-content-center align-items-center'>
                         <QRCode size={300} value={JSON.stringify(item.register_code)} />
-                    </div>
+                    </div> */}
                     {/* 第一行：靠左 */}
                     <div style={{ textAlign: "center", fontSize: "14pt", marginBottom: "8px" }}>
                     {item.company}-{item.job}
@@ -175,9 +175,9 @@ function BackCard({item,logo,onRemove}){
                     <div>地點：光復校區 管理學院地下1樓 62X05</div>
                     <div>參與方法：{item.place}</div>
                     <div>餐盒類型：{item.food}</div>
-                    <div>參與時間：{item.time}</div>
+                    {/* <div>參與時間：{item.time}</div>
                     <div>報到時間：{item.joined}</div>
-                    <div>簽退時間：{item.exited}</div>
+                    <div>簽退時間：{item.exited}</div> */}
                 </div>
                 <div className='position-absolute bottom-0 end-0 m-3'>
                     <Button onClick={()=>onRemove()}>登出</Button>

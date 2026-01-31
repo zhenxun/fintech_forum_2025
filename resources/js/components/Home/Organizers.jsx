@@ -32,7 +32,7 @@ function Organizers({locale}) {
                 </Col>
             </Row>
             <div style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
-                <h2 className='py-5 text-center'>{locale?('Co-Organizer'):'合辦單位'}</h2>
+                <h2 className='py-5 text-center' style={{fontWeight:'bold'}}>{locale?('Co-Organizer'):'合辦單位'}</h2>
                 <h6>{!locale?(<div style={{display:"flex", alignItems:"center"}} className='text-muted'>(依筆畫順序列之)</div>):null}</h6>
             </div>
             <Row className="d-flex justify-content-start align-items-start">

@@ -111,7 +111,7 @@ const translations = {
             waiting: '請稍候',
         },
         checkbox: '本人已確認上述內容正確',
-        submit: '報名',
+        submit: '報名已截止',
         divider: '注意事項',
         notes: [
             <>本次活動全程免費，基於環安衛考量及席次有限，請各界嘉賓把握機會盡速報名，主辦單位保留報名資格審核及活動議程異動之權利。</>,
@@ -208,7 +208,7 @@ const translations = {
             waiting: 'Please wait',
         },
         checkbox: 'I confirm the above information is correct.',
-        submit: 'Submit',
+        submit: 'Register Close',
         divider: 'Important Notes',
         notes: [
             <>The forum is free to attend. Due to safety requirements and limited seats, please register early. The organizer reserves the right to review eligibility and adjust the agenda.</>,
@@ -327,7 +327,7 @@ function Register({ locale }) {
         <>
             <Menu />
             <div className='container py-3' style={{ maxWidth: '1200px' }}>
-                <Card cover={<img alt="register banner" src="/assets/img/2025國際實務論壇海報FINAL_1101.jpg" />}>
+                <Card cover={<img alt="register banner" src="/assets/img/2025國際實務論壇海報FINAL_1101.png" />}>
                     <h1>{t.pageTitle}</h1>
                     <Descriptions column={4} className='mb-3'>
                         {t.descriptions.map((item) => (
@@ -399,7 +399,7 @@ function Register({ locale }) {
                                 <Form.Item initialValue={emailValue} rules={[{ required: true, message: t.messages.required }]} name='email' label={t.labels.email}>
                                     <Space.Compact block>
                                         <Input type='email' id='email' placeholder='student@example.com' />
-                                        <Button onClick={() => onValidate(emailValue)} disabled={isDisabled}>
+                                        <Button dis onClick={() => onValidate(emailValue)} disabled>
                                             {isDisabled ? `${t.email.waiting} (${countdown})` : t.email.sendCode}
                                         </Button>
                                     </Space.Compact>
@@ -438,7 +438,7 @@ function Register({ locale }) {
                             <Checkbox id='agree'>{t.checkbox}</Checkbox>
                         </Form.Item>
                         <Form.Item className='text-end'>
-                            <Button type='primary' block htmlType='submit'>
+                            <Button type='primary' disabled block htmlType='submit'>
                                 {t.submit}
                             </Button>
                         </Form.Item>
