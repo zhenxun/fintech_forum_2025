@@ -10,10 +10,12 @@ services:
             SERVICE_NAME: fintech_forum_2025_website
         working_dir: /var/www
         ports:
-            - "10025:9000"
+            - "127.0.0.1:10025:9000"
         volumes:
             - ./:/var/www
             - ./php/php.ini:/usr/local/etc/php/php.ini
+            # 併發調校：pm.max_children 由預設 5 提高到 20（理由見該檔註解）
+            - /Users/fintechmacproserver2/www/.php-fpm/zzz-tuning.conf:/usr/local/etc/php-fpm.d/zzz-tuning.conf:ro
         networks:
             - fintech_highlight_app-network
 
