@@ -83,6 +83,19 @@ function Epass() {
         </div>
     </div>
     </>)
+    // 序號由主辦單位審核後人工填寫、再以電郵通知；還沒發出之前沒有可用的 QR Code
+    if (!join.register_code) return(
+    <>
+    <Menu />
+    <div style={{height:windowHeight*0.8}} className='container d-flex justify-content-center align-items-center'>
+        <div className="card-container bg-white rounded p-4 text-center">
+            <Divider>入場序號尚未發出</Divider>
+            <p>{join.name} 您好，您的入場序號尚未發出。</p>
+            <p>審核通過且序號填寫完成後，主辦單位會以電郵通知您，屆時再回到此頁查詢即可。</p>
+            <Button onClick={onRemove}>返回</Button>
+        </div>
+    </div>
+    </>)
     return (
         <div style={{height:windowHeight*0.8}} className="d-flex justify-content-center align-items-center m-2">
             <div className="card-container">

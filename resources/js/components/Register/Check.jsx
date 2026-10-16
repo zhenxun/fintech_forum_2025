@@ -62,12 +62,12 @@ function Check() {
                 <Title className='d-flex align-items-center justify-content-center'>查詢結果</Title>
                 {join?(
                     <Paragraph className='m-3 p-3'>
-                        <Text className='p-2'>報名序號 : {join.register_code}</Text>
+                        <Text className='p-2'>報名序號 : {join.register_code ? join.register_code : '尚未發出，主辦單位填寫完成後將以電郵通知您'}</Text>
                         <Text className='p-2'>報名結果 : {join.pass==1?'審核通過':join.pass==2?'審核不通過':'審核中'}</Text>
                         <Text className='p-2'>午餐餐盒 : {join.food}</Text>
                         <Text className='p-2'>參與時間 : {join.time}</Text>
                         <Text className='p-2'>參與方式 : {join.place}</Text>
-                        <div><QRCode value={join.register_code} /></div>
+                        {join.register_code ? <div><QRCode value={join.register_code} /></div> : null}
                     </Paragraph>
                 ):null}
             </Typography>
